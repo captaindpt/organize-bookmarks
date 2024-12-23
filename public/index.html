@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tweet Bookmark Analyzer</h1>
+        <div class="stats-container">
+            <div class="stats-overview">
+                <h2>Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Tweets</h3>
+                        <p id="totalTweets">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Date Range</h3>
+                        <p id="dateRange">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Media Stats</h3>
+                        <p id="mediaStats">-</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>AI Content</h3>
+                        <p id="aiStats">-</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="top-users">
+                <h2>Top Users</h2>
+                <div id="topUsersList" class="user-list">
+                    <!-- Top users will be inserted here -->
+                </div>
+            </div>
+
+            <div class="search-section">
+                <h2>Search Tweets</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search tweets...">
+                    <button id="searchButton">Search</button>
+                </div>
+                <div id="searchResults" class="tweet-list">
+                    <!-- Search results will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <form id="bookmarkForm">
+                <div class="input-group">
+                    <label for="bookmarkUrl">Enter your bookmarks URL:</label>
+                    <input type="url" id="bookmarkUrl" name="bookmarkUrl" required 
+                           placeholder="https://twitter.com/i/bookmarks">
+                </div>
+                <button type="submit">Analyze Bookmarks</button>
+            </form>
+        </div>
+        <div id="status" class="status-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
